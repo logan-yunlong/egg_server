@@ -14,6 +14,10 @@ const appInfo = (appInfo) => {
         }
     }
     config.news = news;
+    // 配置middleware
+    config.middleware = ['robot']
+    // 配置robot的正则表达式
+    config.robot = {ua: [/Baiduspider/i]}
     return config;
 };
 
