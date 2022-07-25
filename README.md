@@ -35,3 +35,9 @@ from node 的版本选择
  node           14-buster-slim      9917d232c3dd        5 hours ago         181MB
  node           14-alpine           9db54a688554        5 hours ago         117MB
 ```
+
+## 使用Dockerfile打包
+```bash
+docker build -t egg_server ./
+docker run -p 7001:7001 egg_server
+```

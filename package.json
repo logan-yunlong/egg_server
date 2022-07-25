@@ -5,6 +5,8 @@
   "author": "loganylwu <loganylwu@tencent.com>",
   "license": "MIT",
   "scripts": {
+    "start": "egg-scripts start",
+    "stop": "egg-scripts stop",
     "dev": "egg-bin dev",
     "test": "egg-bin test",
     "debug": "egg-bin debug --inpsect=9229",
@@ -12,6 +14,7 @@
   },
   "dependencies": {
     "egg": "^2.36.0",
+    "egg-scripts": "^2.17.0",
     "egg-view-nunjucks": "^2.3.0",
     "moment": "^2.29.4"
   },
