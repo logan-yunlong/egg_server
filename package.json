@@ -1,0 +1,16 @@
+{
+  "name": "egg_server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "loganylwu <loganylwu@tencent.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "egg-bin dev"
+  },
+  "dependencies": {
+    "egg": "^2.36.0"
+  },
+  "devDependencies": {
+    "egg-bin": "^5.2.0"
+  }
+}
