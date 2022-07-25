@@ -5,8 +5,8 @@ class NewsController extends Controller {
     async list() {
         let dataList = {
             list: [
-                {id: 1, title: 'this is news 1', url: '/news/1'},
-                {id: 2, title: 'this is news 2', url: '/news/2'},
+                {id: 1, title: 'this is news 1', url: '/news/1', time: '1658734999'},
+                {id: 2, title: 'this is news 2', url: '/news/2', time: '1658734999'},
             ]
         }
         // 再次获取一下远程的信息
