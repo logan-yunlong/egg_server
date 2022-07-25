@@ -4,4 +4,5 @@ module.exports = (app) => {
     router.get('/', controller.home.index);
     router.get("/news", controller.news.list);
     router.get("/error", controller.error.index);
+    router.get('/task', controller.task.index);
 };
