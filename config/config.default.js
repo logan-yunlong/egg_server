@@ -1,7 +1,7 @@
 "use strict";
 
 const news = {
-    serverUrl: "https://service-5yyhy5n3-1252153359.sh.apigw.tencentcs.com/release",
+    serverUrl: "http://service-5yyhy5n3-1252153359.sh.apigw.tencentcs.com/release",
 }
 const appInfo = (appInfo) => {
     const config = {};

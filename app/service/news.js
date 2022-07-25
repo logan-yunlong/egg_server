@@ -16,6 +16,7 @@ class NewsService extends Service {
             dataType: 'json',
         }
         const {data: idList} = await this.ctx.curl(url, options);
+        this.ctx.logger.debug(idList);
         return idList;
     }
 }
