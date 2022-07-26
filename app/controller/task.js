@@ -15,6 +15,41 @@ class TaskController extends Controller {
             this.ctx.body = resultSet;
         }
     }
+
+    // 创建一条 数据
+    async create() {
+        let result = {status: false, value: null};
+        const task = {
+            id: 2,
+            title: "base",
+            description: "描述信息",
+        }
+        try {
+            var insertSuccess = await this.service.task.create(task);
+            if (insertSuccess) {
+                result.status = true;
+                result.value = insertSuccess;
+            }
+            this.ctx.body = result;
+        } catch (e) {
+            this.logger.error(e);
+            this.ctx.body = result;
+        }
+    }
+
+    async read() {
+        const query = this.ctx.query;
+        const resultSet = await this.service.task.read(query.id);
+        this.ctx.body = resultSet;
+    }
+
+    async update() {
+        const row = this.ctx.request.body;
+        this.logger.debug(row);
+        const result = await this.service.task.update(row);
+        this.ctx.body = result;
+    }
+
 }
 
 module.exports = TaskController;

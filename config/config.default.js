@@ -5,7 +5,7 @@
 const news = {
     serverUrl: "http://service-5yyhy5n3-1252153359.sh.apigw.tencentcs.com/release",
 }
-
+// mysql配置
 const mysql = {
     client: {
         // host
@@ -18,6 +18,7 @@ const mysql = {
         password: 'Logan@123',
         // 数据库名
         database: 'task_app',
+        debug: true
     },
 
     // 是否加载到 app 上，默认开启
@@ -25,9 +26,15 @@ const mysql = {
     // 是否加载到 agent 上，默认关闭
     agent: false,
 }
+
+// 日志配置
 const logger = {
     level: 'INFO',
     consoleLevel: 'INFO'
+}
+// 错误中间件配置
+const errorHandler = {
+    match: "*"
 }
 const appInfo = (appInfo) => {
     const config = {};
@@ -41,12 +48,13 @@ const appInfo = (appInfo) => {
     config.logger = logger;
     config.news = news;
     // 配置middleware
-    config.middleware = ['robot']
+    config.middleware = ['robot', 'errorHandler']
     // 配置robot的正则表达式
     config.robot = {
         ua: [/curl/i, /Baiduspider/i],
     }
     config.mysql = mysql;
+    config.errorHandler = errorHandler;
     return config;
 };
 
